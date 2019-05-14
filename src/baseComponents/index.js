@@ -14,7 +14,7 @@ function get(name) {
 }
 
 const Render = ({ n, ...restProps }) => {
-  const Component = layoutSet[n] || <div>未定义的 layout: {n}</div>;
+  const Component = layoutSet[n] || (() => <div>未定义的 layout: {n}</div>);
   return <Component {...restProps} />
 }
 

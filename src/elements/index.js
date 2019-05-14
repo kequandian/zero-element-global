@@ -1,6 +1,4 @@
 import React from 'react';
-import loader from '../utils/loader';
-
 
 const elementsSet = {
   'Loading': () => <div>Loading……</div>,
@@ -9,7 +7,7 @@ const elementsSet = {
 
 function set(NodeObj) {
   Object.keys(NodeObj).forEach(key => {
-    elementsSet[key] = loader(NodeObj[key]);
+    elementsSet[key] = NodeObj[key];
   })
 }
 
@@ -18,7 +16,7 @@ function get(name) {
 }
 
 const Render = ({ n, ...restProps }) => {
-  const Component = elementsSet[n] || <div>未定义的 element: {n}</div>;
+  const Component = elementsSet[n] || (() => <div>未定义的 element: {n}</div>);
   return <Component {...restProps} />
 }
 

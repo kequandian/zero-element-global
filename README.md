@@ -41,3 +41,18 @@ set({
 
 export default () => <Render n="Loading" />
 ```
+
+## layout
+
+```javascript
+import { set, Render } from 'zero-element-global/lib/layout';
+// or
+// import { layout } from 'zero-element-global';
+// const { set, Render } = layout;
+
+set({
+  'Grid': () => <div>Grid</div>,
+});
+
+export default () => <Render n="Grid" />
+```

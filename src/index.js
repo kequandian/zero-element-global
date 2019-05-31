@@ -1,11 +1,11 @@
 import APIConfig from '@/APIConfig';
-import baseComponents from '@/baseComponents';
+import container from '@/container';
 import elements from '@/elements';
 import layout from '@/layout';
 
 export {
   APIConfig,
-  baseComponents,
+  container,
   elements,
   layout,
 }

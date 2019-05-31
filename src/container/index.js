@@ -1,20 +1,20 @@
 import React from 'react';
 
 
-const layoutSet = {};
+const containerSet = {};
 
 function set(NodeObj) {
   Object.keys(NodeObj).forEach(key => {
-    layoutSet[key] = NodeObj[key];
+    containerSet[key] = NodeObj[key];
   });
 }
 
 function get(name) {
-  return layoutSet[name];
+  return containerSet[name];
 }
 
 const Render = ({ n, ...restProps }) => {
-  const Component = layoutSet[n] || (() => <div>未定义的 layout: {n}</div>);
+  const Component = containerSet[n] || (() => <div>未定义的 container: {n}</div>);
   return <Component {...restProps} />
 }
 

@@ -12,13 +12,13 @@ set({
 get('FIELD_test'); // return 'test'
 ```
 
-## baseComponents
+## container
 
 ```javascript
-import { set, Render } from 'zero-element-global/lib/baseComponents';
+import { set, Render } from 'zero-element-global/lib/container';
 // or
-// import { baseComponents } from 'zero-element-global';
-// const { set, Render } = baseComponents;
+// import { container } from 'zero-element-global';
+// const { set, Render } = container;
 
 set({
   'MyComponent': () => <div>demo</div>,
@@ -55,4 +55,21 @@ set({
 });
 
 export default () => <Render n="Grid" />
+```
+
+## listAction
+
+```javascript
+import { set, Render } from 'zero-element-global/lib/listAction';
+// or
+// import { listAction } from 'zero-element-global';
+// const { set, get } = listAction;
+
+set({
+  test(){
+    console.log('test');
+  },
+});
+
+get('test')();
 ```

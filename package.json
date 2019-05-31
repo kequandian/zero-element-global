@@ -1,6 +1,6 @@
 {
   "name": "zero-element-global",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "zero-element 的全局配置",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,6 @@
     "build": "npm run clean && gulp"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "lodash": "^4.17.4",
     "numeral": "^2.0.6",
     "qs": "^6.5.0",

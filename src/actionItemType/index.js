@@ -1,20 +1,20 @@
 import React from 'react';
 
 
-const formItenTypeSet = {};
+const actionItemTypeSet = {};
 
 function set(NodeObj) {
   Object.keys(NodeObj).forEach(key => {
-    formItenTypeSet[key] = NodeObj[key];
+    actionItemTypeSet[key] = NodeObj[key];
   })
 }
 
 function get(name) {
-  return formItenTypeSet[name];
+  return actionItemTypeSet[name];
 }
 
 const Render = ({ n, ...restProps }) => {
-  const Component = formItenTypeSet[n] || (() => <div>未定义的 formItenType: {n}</div>);
+  const Component = actionItemTypeSet[n] || (() => <div>未定义的 actionItemType: {n}</div>);
   return <Component {...restProps} />
 }
 
